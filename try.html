@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "Warnock Pro Display";
+        src: url("https://db.onlinewebfonts.com/t/a8c1f086a54b845a6f128a35818e0b02.eot");
+        src: url("https://db.onlinewebfonts.com/t/a8c1f086a54b845a6f128a35818e0b02.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://db.onlinewebfonts.com/t/a8c1f086a54b845a6f128a35818e0b02.woff2")
+            format("woff2"),
+          url("https://db.onlinewebfonts.com/t/a8c1f086a54b845a6f128a35818e0b02.woff")
+            format("woff"),
+          url("https://db.onlinewebfonts.com/t/a8c1f086a54b845a6f128a35818e0b02.ttf")
+            format("truetype"),
+          url("https://db.onlinewebfonts.com/t/a8c1f086a54b845a6f128a35818e0b02.svg#Warnock Pro Display")
+            format("svg");
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      .list {
+        color: rgba(0, 0, 0, 0.5);
+      }
+      .displayflex {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .displayflex1 {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+        font-family: "Roboto Mono", sans-serif;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-top: 15px;
+        margin-left: 50px;
+      }
+      .a {
+        display: inline-block;
+        width: 30px;
+        margin-top: 20px;
+        font-family: "Roboto Mono", sans-serif;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        align-content: center;
+      }
+      .line {
+        width: 180px;
+        height: 2px;
+        background-color: black;
+        margin-top: 5px;
+      }
+      .line1 {
+        width: 900px;
+        height: 2px;
+        background-color: black;
+        float: right;
+        margin-top: 5px;
+      }
+
+      .se {
+        border-style: none none solid;
+        padding: 10px 20px;
+        margin-left: 10px;
+        background-color: #d7d6d4;
+        letter-spacing: 4px;
+      }
+      .leftside {
+        display: flex;
+        width: 40px;
+        height: 200px;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        margin-top: 200px;
+        margin-left: 30px;
+      }
+
+      .line0 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .logo {
+        font-family: Warnock Pro Display, sans-serif;
+        color: #000;
+        font-size: 30px;
+        line-height: 1;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-decoration: none;
+        margin-left: 30px;
+      }
+      .section {
+        width: 600px;
+
+        height: 100px;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+      .text01 {
+        margin-top: 50px;
+        margin-left: 150px;
+        font-family: "Roboto Mono", sans-serif;
+        color: #000;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 400;
+        letter-spacing: 4px;
+      }
+      main {
+        display: flex;
+      }
+      h2 {
+        margin-left: 20px;
+        font-size: 12px;
+        line-height: 1;
+        color: #000;
+        font-weight: 500;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin-top: 10px;
+        font-size: 70px;
+        font-family: Warnock Pro Display, sans-serif;
+        color: #000;
+        font-size: 73px;
+        line-height: 1;
+        font-weight: 400;
+        letter-spacing: 3px;
+      }
+      .fig {
+        display: flex;
+        margin-left: 180px;
+        width: 700px;
+      }
+      main {
+        height: 180px;
+      }
+      .para {
+        margin-top: 50px;
+      }
+      .h3 {
+        margin-top: 10px;
+        margin-left: 40px;
+        font-family: Warnock Pro Display, sans-serif;
+        color: #000;
+        font-size: 30px;
+        line-height: 1;
+        font-weight: 1;
+        letter-spacing: 1px;
+      }
+
+      .buttonart {
+        height: 35px;
+        width: 200px;
+        margin-top: 10px;
+        color: white;
+        background-color: #000;
+        font-family: "Roboto Mono", sans-serif;
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      .bottom {
+        width: 875px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .e1 {
+        font-size: 14px;
+        margin-top: 60px;
+        margin-left: 40px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      .e2 {
+        font-size: 12px;
+        margin-top: 60px;
+        margin-left: 80px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      .right {
+        height: 600px;
+      }
+      h5 {
+        margin-top: 55px;
+        font-family: "Roboto Mono", sans-serif;
+        color: #000;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      .as1 {
+        background-color: #ffffff60;
+        display: flex;
+
+        margin-top: 10px;
+      }
+
+      .ph1 {
+        margin-left: 1px;
+        margin-top: 12px;
+        width: 150px;
+
+        font-family: "Roboto Mono", sans-serif;
+        color: #000;
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+
+      .ph2 {
+        margin-top: 2px;
+        margin-left: 1px;
+
+        width: 150px;
+        color: rgba(0, 0, 0, 0.4);
+        font-size: 12px;
+      }
+
+      .simg {
+        padding: 10px;
+      }
+      .arrow {
+        margin-top: 1px;
+        margin-left: 200px;
+      }
+      .bookflex {
+        display: flex;
+        margin: 10px;
+      }
+      .btn {
+        background-color: black;
+        padding: 11px 20px;
+        color: white;
+        border-style: none;
+        margin-left: 0px;
+        font-family: "Roboto Mono", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+      body {
+        background-color: #d7d6d4;
+        letter-spacing: normal;
+      }
+      .para1 {
+        font-family: Roboto, sans-serif;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 15px;
+        line-height: 1.57;
+      }
+      .last {
+        margin-top: 60px;
+        font-family: "Roboto Mono", sans-serif;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 10px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .minline {
+        margin-top: 66px;
+        width: 27px;
+
+        margin-left: 350px;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 2px;
+      }
+      .book {
+        margin-top: 2px;
+        margin-left: 20px;
+        font-family: "Roboto Mono", sans-serif;
+        color: #000;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      .bb1 {
+        margin-left: 10px;
+        font-family: "Roboto Mono", sans-serif;
+        color: #000;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      .bb2 {
+        margin-left: 10px;
+        color: rgba(0, 0, 0, 0.4);
+        font-size: 12px;
+        line-height: 1.7;
+        letter-spacing: 0px;
+      }
+      .form {
+        margin-right: 20px;
+      }
+      a:hover {
+        color: #000;
+      }
+      .as1:hover {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="line0">
+      <div class="line"></div>
+      <div class="line1"></div>
+    </div>
+    <nav class="displayflex">
+      <div class="logo">
+        Architecture<br />
+        Magazine
+      </div>
+      <ul type="none" class="displayflex1">
+        <li><a href="" class="list">HOME</a></li>
+        <li><a href="" class="list">Our work</a></li>
+        <li><a href="" class="list">ARCHITECTURE</a></li>
+        <li><a href="" class="list">Contact Us</a></li>
+      </ul>
+      <form action="#" class="form">
+        <input type="text" name="" id="" class="se" placeholder="TYPE" /><button
+          class="btn"
+        >
+          search
+        </button>
+      </form>
+    </nav>
+    <main>
+      <aside class="leftside">
+        <svg
+          fill="#000000"
+          width="30px"
+          height="30px"
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004
+             9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"
+          />
+        </svg>
+        <svg
+          width="30px"
+          height="30px"
+          viewBox="0 -2 20 20"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <title>twitter [#154]</title>
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <g
+            id="Page-1"
+            stroke="none"
+            stroke-width="1"
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g
+              id="Dribbble-Light-Preview"
+              transform="translate(-60.000000, -7521.000000)"
+              fill="#000000"
+            >
+              <g id="icons" transform="translate(56.000000, 160.000000)">
+                <path
+                  d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 
+                C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24
+                ,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705"
+                  id="twitter-[#154]"
+                ></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <div class="a">OUR SOCIALS</div>
+      </aside>
+      <div class="text01">01</div>
+      <section class="section">
+        <h2>MORE ABOUT ARCHITECTURE</h2>
+        <h1>ARCHITECTURE</h1>
+      </section>
+      <aside class="right">
+        <h5>next articles</h5>
+        <div class="as1">
+          <div class="right1">
+            <img src="aside1.png" alt="" class="simg" />
+          </div>
+          <div>
+            <div class="ph1">PHOTOGRAPHY</div>
+            <div class="ph2">20 november 2016</div>
+          </div>
+        </div>
+        <div class="as1">
+          <div class="right1">
+            <img src="aside2.png" alt="" class="simg" />
+          </div>
+          <div>
+            <div class="ph1">PHOTOGRAPHY</div>
+            <div class="ph2">20 november 2016</div>
+          </div>
+        </div>
+        <div class="as1">
+          <div class="right1">
+            <img src="aside3.png" alt="" class="simg" />
+          </div>
+          <div>
+            <div class="ph1">PHOTOGRAPHY</div>
+            <div class="ph2">20 november 2016</div>
+          </div>
+        </div>
+        <div class="bookflex">
+          <div class="book">Books</div>
+          <svg
+            class="arrow"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.25 8.24976H13.8748V9.74952H2.25V8.24976Z"
+              fill="black"
+            />
+            <path
+              d="M10.6503 14.0252L9.59979 12.9748L13.5753 9.00002L9.59979 5.02526L10.6503 3.9748L15.6748 9.00004L10.6503 14.0252Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <div class="bookflex">
+          <div>
+            <img src="book1.png" alt="" />
+          </div>
+          <div>
+            <div class="bb1">
+              BLUEPRINRS &nbsp; &amp <br />
+              BULIDING
+            </div>
+            <div>
+              <div class="bb2">Russell Kennedy</div>
+            </div>
+          </div>
+        </div>
+        <div class="bookflex">
+          <div>
+            <img src="book 2.png" alt="" />
+          </div>
+          <div>
+            <div class="bb1">
+              MODERN <br />
+              ARCHITECTURE
+            </div>
+            <div>
+              <div class="bb2">Mitchel Pittman</div>
+            </div>
+          </div>
+        </div>
+        <div class="bookflex">
+          <div>
+            <img src="book3.png" alt="" />
+          </div>
+          <div>
+            <div class="bb1">ARCHITECTURE</div>
+            <div>
+              <div class="bb2">Christian</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <article class="fig">
+      <div>
+        <img src="fig.png" alt="" />
+      </div>
+      <div class="h3">
+        <h3>
+          Architecture<br />
+          Magazine
+        </h3>
+
+        <p class="para1">
+          We decided to use a class diagram instead of an object diagram since
+          we wanted to show the classes our project consists of and what those
+          classes were each capable of (methods). The object diagram would
+          instead have shown the interaction between the classes at some point
+          in run time.
+        </p>
+        <button class="buttonart">SEE FULL ARTICLE</button>
+      </div>
+    </article>
+    <div class="bottom">
+      <div class="e1">01</div>
+      <div class="e2">DESIGNED BY MASAR</div>
+      <div class="minline"></div>
+      <div class="last">WATCH TUTORIAL</div>
+    </div>
+  </body>
+</html>
